@@ -20,7 +20,7 @@ CREATE TABLE "users"(
 
 CREATE TABLE "foods"(
     "id" SERIAL PRIMARY KEY,
-    "foodsName" VARCHAR(32) NOT NULL ,
+    "foodsName" VARCHAR(32) NOT NULL UNIQUE,
     "price" NUMERIC(30,2) NOT NULL CHECK("price">0),
     "currancy" VARCHAR(16) NOT NULL CHECK("currancy" !=''),
     "dateProduction" DATE NOT NULL CHECK("dateProduction"<current_date), 
